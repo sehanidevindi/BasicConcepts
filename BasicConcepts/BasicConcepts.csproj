@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="com._02basicconcepts\A.cs" />
+    <Compile Include="com._02basicconcepts\Employee.cs" />
+    <Compile Include="com._02basicconcepts\IEmail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

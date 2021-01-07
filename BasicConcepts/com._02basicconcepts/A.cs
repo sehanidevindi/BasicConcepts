@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace BasicConcepts.com._02basicconcepts
 {
-    class A
+    interface IA
     {
-        public virtual void MethodA() {
-            Console.WriteLine("A - MA");
-        }
+        void MethodA();
+        void MethodB();
+        
     }
 
-    class B : A {
+    class B : IA 
+    {
 
-        public override void MethodA()
+        public void MethodA()
         {
             Console.WriteLine("B - MA");
         }
@@ -26,11 +27,12 @@ namespace BasicConcepts.com._02basicconcepts
     }
 
     class Test {
-        static void Main() {
+        static void Main()
+        {
 
-            Console.WriteLine("A obj");
-            A aobj = new A();
-            aobj.MethodA();
+           // Console.WriteLine("A obj");
+           // IA aobj = new A();
+           // aobj.MethodA();
 
             Console.WriteLine("B obj");
             B bobj = new B();
@@ -38,9 +40,10 @@ namespace BasicConcepts.com._02basicconcepts
             bobj.MethodB();
 
             Console.WriteLine("A or B?");
-            int x = 10;
-            A obj1 = new B();
+            int x = 23;
+            IA obj1 = new B();
             obj1.MethodA();
+            obj1.MethodB();
 
         }
     }
